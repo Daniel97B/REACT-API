@@ -1,8 +1,11 @@
+//! Importaciones 
 import React from 'react'
 import '../css/medicina_deportiva.css'
-
 import { Link } from "react-router-dom";
+
+//! Funcion Visual
 const Medicina_deportiva = () => {
+    //! Vista de Buton mas informacion (Evaluacion clinica)
     return (
         <div>
             <main class="row">
@@ -19,6 +22,7 @@ const Medicina_deportiva = () => {
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+   {/* Links de acceso  nav */}
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -57,7 +61,7 @@ const Medicina_deportiva = () => {
 <div class="col-1 azul">
     <p></p>
 </div>
-
+{/* Main */}
 </main>
             <aside class="row">
             <section class="col-md-10 col-lg-10 offset-lg-1 col-xs-10 col-sm-10" id="Bienvenidos">
@@ -87,7 +91,7 @@ const Medicina_deportiva = () => {
 
         <br></br>
 
-       
+{/* Footer */}
 
         <footer class="row azul">
 

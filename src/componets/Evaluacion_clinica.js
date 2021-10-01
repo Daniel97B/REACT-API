@@ -1,9 +1,12 @@
+//! Importaciones
 import React from 'react'
 import '../css/evalluacion_clinica.css'
 
+//! Funcion de visualizacion
 const Evaluacion_clinica = () => {
     return (
         <div>
+            {/* Informacion de Evaluacion clinica */}
             <br></br>
         <aside class="row">
 
@@ -15,7 +18,7 @@ const Evaluacion_clinica = () => {
                     <p>Servicios incluidos en cualquier clase deportiva</p>
                 </div>
             </section>
-
+                {/* Integracion de Imagen*/}
             <section class="col-md-10 col-lg-10 offset-lg-1 col-xs-10 col-sm-10" id="banner">
                 <img class="banner " src={require("../img/evaluacion clinica.jpg").default} height="500px" alt=""></img>
             </section>
@@ -65,4 +68,5 @@ const Evaluacion_clinica = () => {
     )
 }
 
+//! Explort
 export default Evaluacion_clinica

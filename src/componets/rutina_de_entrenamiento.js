@@ -1,10 +1,13 @@
+//! Importaciones
 import React from 'react'
 /*import { Route, Router, Switch } from 'react-router';
 import Clases from '../pagination/container';*/
 import '../css/medicina_deportiva.css'
+//! Funcion de visualizacion
 const Rutina_de_entrenamiento = () => {
     return (
       <>
+        {/* Infomracion de Rutina entrenamiento */}
          <aside class="row">
             <section class="col-md-10 col-lg-10 offset-lg-1 col-xs-10 col-sm-10" id="Bienvenidos">
                 <div class="contenedor Franklin-Gothic">
@@ -14,7 +17,7 @@ const Rutina_de_entrenamiento = () => {
                     <p>Servicios incluidos en cualquier clase deportiva</p>
                 </div>
             </section>
-
+            {/* Agregamos imagen */}
             <section class="col-md-10 col-lg-10 offset-lg-1 col-xs-10 col-sm-10" id="banner">
                 <img class="banner" src={require('../img/rutina de entrenamiento.jpg').default }  height="500px"  alt=""></img>
             </section>
@@ -27,16 +30,13 @@ const Rutina_de_entrenamiento = () => {
                     <p>-Recibirás ayuda en los ejercicios que realizabas incorrectamente.</p>
                     <p>-Dirigirán el uso de los equipos dentro del gimnasio</p>
                     <p>-Mantendrá la motivación y la voluntad en los nuevos participantes.</p>
-                
                 </div>
             </section>
 
         </aside>
 
         <br></br>
-
-       
-
+        {/* Footer */}
         <footer class="row azul">
 
             <div class="col-1">

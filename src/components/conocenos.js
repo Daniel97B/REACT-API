@@ -1,10 +1,13 @@
+//! Importaciones 
 //import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 //import { Link } from "react-router-dom";
 import '../css/conocenos.css';
 import video from '../video/GYM.mp4'
 import { Link } from "react-router-dom";
 
+//! Funcion Visual
 const Conocenos = () => {
+    //! Vista de complementarios 
     return (
         <>
             <main class="row">

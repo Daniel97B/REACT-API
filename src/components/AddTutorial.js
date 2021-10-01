@@ -1,9 +1,11 @@
+//! Importaciones
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createTutorial } from "../actions/tutorials";
 
-
+//! Funcion general
 const AddTutorial = () => {
+
   const initialTutorialState = {
     id: null,
     Nombre: "",
@@ -12,7 +14,7 @@ const AddTutorial = () => {
     Horario: "",
     Clase: "",
   };
-
+  
   const [tutorial, setTutorial] = useState(initialTutorialState);
 
   const [submitted, setSubmitted] = useState(false);
@@ -23,7 +25,7 @@ const AddTutorial = () => {
     const { name, value } = event.target;
     setTutorial({ ...tutorial, [name]: value });
   };
-
+  
   const saveTutorial = () => {
     const { Nombre, Apellido, Edad, Horario, Clase  } = tutorial;
 
@@ -50,7 +52,7 @@ const AddTutorial = () => {
     setTutorial(initialTutorialState);
     setSubmitted(false);
   };
-
+  //! Vista del fomrulario 
   return (
     <div className="submit-form">
       {submitted ? (
@@ -74,6 +76,7 @@ const AddTutorial = () => {
               name="Nombre"
             />
           </div>
+         
           <br />
             <div className="form-group">
               <label htmlFor="Apellido">Apellido</label>
@@ -133,4 +136,5 @@ const AddTutorial = () => {
   );
 };
 
+//! Exportacion
 export default AddTutorial;

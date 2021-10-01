@@ -1,3 +1,4 @@
+//! Importaciones 
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -5,9 +6,9 @@ import {
   findTutorialsByTitle,
   deleteAllTutorials,
 } from "../actions/tutorials";
-
 import { Link } from "react-router-dom";
 
+//! Funcion Visual
 const TutorialsList = () => {
   const [currentTutorial, setCurrentTutorial] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(-1);
@@ -50,7 +51,7 @@ const TutorialsList = () => {
     refreshData();
     dispatch(findTutorialsByTitle(searchTitle));
   };
-
+  //! Visualicacion de  Edit 
   return (
     <div className="list row">
       <div className="col-md-8">
@@ -153,4 +154,5 @@ const TutorialsList = () => {
   );
 };
 
+//! Importaciones 
 export default TutorialsList;

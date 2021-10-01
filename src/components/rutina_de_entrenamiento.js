@@ -1,13 +1,17 @@
+//! Importaciones 
 import React from 'react'
 /*import { Route, Router, Switch } from 'react-router';
 import Clases from '../pagination/container';*/
 import '../css/medicina_deportiva.css'
-
 import { Link } from "react-router-dom";
+
+//! Funcion Visual
 const Rutina_de_entrenamiento = () => {
+    //! Vista de Buton mas informacion (Rutina entrenamiento)
     return (
         <>
-            <main class="row">
+            {/* Nav*/}
+            <div class="row">
 
                 <div class="col-1 azul">
                     <p></p>
@@ -22,6 +26,7 @@ const Rutina_de_entrenamiento = () => {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
+                        {/* Integracion de links */}
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <Link class="nav-link active" to="/">
@@ -60,7 +65,8 @@ const Rutina_de_entrenamiento = () => {
                     <p></p>
                 </div>
 
-            </main>
+            </div>
+            {/* Aside informacion de la pagina */}
             <aside class="row">
                 <section class="col-md-10 col-lg-10 offset-lg-1 col-xs-10 col-sm-10" id="Bienvenidos">
                     <div class="contenedor Franklin-Gothic">
@@ -91,7 +97,7 @@ const Rutina_de_entrenamiento = () => {
 
             <br></br>
 
-
+            {/* Footer */}
 
             <footer class="row azul">
 
@@ -120,4 +126,5 @@ const Rutina_de_entrenamiento = () => {
     )
 }
 
+//! exportacion 
 export default Rutina_de_entrenamiento;

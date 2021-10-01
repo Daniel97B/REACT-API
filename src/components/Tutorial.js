@@ -1,8 +1,10 @@
+//! Importaciones 
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { updateTutorial, deleteTutorial } from "../actions/tutorials";
 import TutorialDataService from "../services/TutorialService";
 
+//! Funcion Visual
 const Tutorial = (props) => {
   const initialTutorialState = {
     id: null,
@@ -59,7 +61,7 @@ const Tutorial = (props) => {
         console.log(e);
       });
   };
-
+  //! Visualisacion del CRUD (UPDATE)
   return (
     <div>
       {currentTutorial ? (

@@ -1,11 +1,16 @@
+//! Importaciones 
 import React from 'react'
 import '../css/evalluacion_clinica.css'
 
 import { Link } from "react-router-dom";
+
+//! Funcion Visual
 const Evaluacion_clinica = () => {
+    //! Vista de Buton mas informacion (Evaluacion clinica)
     return (
         <div>
-            <main class="row">
+            {/* Nav*/}
+            <div class="row">
 
                 <div class="col-1 azul">
                     <p></p>
@@ -19,6 +24,7 @@ const Evaluacion_clinica = () => {
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
+                    {/* Integracion de links */}
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
@@ -58,8 +64,10 @@ const Evaluacion_clinica = () => {
                     <p></p>
                 </div>
 
-            </main>
+            </div>
+            
             <br></br>
+            {/* Aside informacion de la pagina */}
             <aside class="row">
 
                 <section class="col-md-10 col-lg-10 offset-lg-1 col-xs-10 col-sm-10" id="Bienvenidos">
@@ -91,7 +99,7 @@ const Evaluacion_clinica = () => {
             <br></br>
 
 
-
+            {/* Footer */}
             <footer class="row azul">
 
                 <div class="col-1">

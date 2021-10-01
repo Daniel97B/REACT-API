@@ -1,9 +1,12 @@
+//! Importaciones
 import React from 'react'
 import '../css/medicina_deportiva.css'
 
+//! Funcion de visualizacion
 const Medicina_deportiva = () => {
     return (
         <div>
+        {/* Infomracion de Medicina */}
             <aside class="row">
             <section class="col-md-10 col-lg-10 offset-lg-1 col-xs-10 col-sm-10" id="Bienvenidos">
                 <div class="contenedor Franklin-Gothic">
@@ -13,7 +16,7 @@ const Medicina_deportiva = () => {
                     <p>Servicios incluidos en cualquier clase deportiva</p>
                 </div>
             </section>
-
+        {/* Integracion de imagen */}
             <section class="col-md-10 col-lg-10 offset-lg-1 col-xs-10 col-sm-10" id="banner">
                 <img class="banner" src={require('../img/medicina deportiava.jpg').default}  height="500px"  alt=""></img>
             </section>
@@ -31,9 +34,7 @@ const Medicina_deportiva = () => {
         </aside>
 
         <br></br>
-
-       
-
+        {/* Footer */}
         <footer class="row azul">
 
             <div class="col-1">
