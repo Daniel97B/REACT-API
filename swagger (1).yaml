@@ -1,0 +1,163 @@
+swagger: "2.0"
+info:
+  description: "Api para me manejo de la base de datos de entrenadores en la cual puedes hacer peticiones de crear,traer todos los entenadores, traer entrenadores por ID, Actulizar entrenadores por ID, eliminar entrenadores por ID, Eliminar todos lo entrenadores.\n\n En la api tenemos la siguiente estructura.\n\n ⚫ API-MYSQL/app (contenedor de nuestra aplicacion) al mismo nivel tambien tenemos lo archiivos package-lock.json, package.json y server.js (el archivo que cre nuestro servidor con express ademas contiene los puertos y la ruta principal).\n\n ⚫  En app tenemos /config/db.cofingjs (este es el encargado de hacer la conexion a la base de datos).\n\n ⚫  En app tambien tenemos la carpeta controllers (en esta tenemos lo que son todas las funciones nombradas anteriormente y que repasaremos mas abajo (peticiones)).\n\n ⚫  En appp tambien tenemos la carpeta models esta contiene dos archivos el index.js y el tutorial.models.js (en esta carpeta tenemos el modelo entrenador).\n\n ⚫  Y por ultimo en la caperta app tambien tenemos routes con el archivo turorial.routes.js (en este tenemos todas las rutas para las peticiones)"
+  version: "1.0.0"
+  title: "API Entrenadores GYM-STYLE'S"
+host: "localhost:8080"
+basePath: "/api/tutorials"
+tags:
+- name: "PETICIONES"
+  description: "Todas las peticiones que puedes hacer 😎"
+paths:
+  /:
+    post:
+      tags:
+      - "PETICIONES"
+      summary: "Añade un nuevo entrenador"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Entrenador que se va a agregar"
+        required: true
+        schema:
+          $ref: "#/definitions/Entrenador"
+      responses:
+        "500":
+          description: "Ocurrió algún error al crear el Entrenador"
+    get:
+      tags:
+      - "PETICIONES"
+      summary: "Trae todos los entrenadores"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Entrenadores que trae"
+        required: true
+        schema:
+          $ref: "#/definitions/Entrenador"
+      responses:
+        "500":
+          description: "Ocurrió algún error al crear el Entrenador" 
+    delete:
+      tags:
+      - "PETICIONES"
+      summary: "Deletes a pet"
+      description: ""
+      operationId: "deletePet"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Entrenadores que se borran"
+        required: true
+        schema:
+          $ref: "#/definitions/Entrenador"
+      responses:
+        "500":
+          description: "Ocurrió algún error al crear el Entrenador"    
+          
+  /:id:
+    get:
+      tags:
+      - "PETICIONES"
+      summary: "Trae a el entrenador segun su id"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "Id"
+        in: "path"
+        description: "Id del entrenador a traer"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "body"
+        description: "Entrenador que trae"
+        required: true
+        schema:
+          $ref: "#/definitions/Entrenador"
+      responses:
+        "500":
+          description: "Ocurrió algún error al crear el Entrenador"   
+    put:
+      tags:
+      - "PETICIONES"
+      summary: "Actualiza a el entrenador segun su id"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "Id"
+        in: "path"
+        description: "Id del entrenador a actualizar"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "body"
+        description: "Entrenador que se actualiza"
+        required: true
+        schema:
+          $ref: "#/definitions/Entrenador"
+      responses:
+        "500":
+          description: "Ocurrió algún error al crear el Entrenador"
+    delete:
+      tags:
+      - "PETICIONES"
+      summary: "Borra a el entrenador segun su id"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "Id"
+        in: "path"
+        description: "Id del entrenador a borrar"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "body"
+        description: "Entrenador que se elimina"
+        required: true
+        schema:
+          $ref: "#/definitions/Entrenador"
+      responses:
+        "500":
+          description: "Ocurrió algún error al crear el Entrenador"
+          
+          
+definitions:
+  Entrenador:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int(20)"
+      Nombre:
+        type: "string"
+        format: "varchar(20)"
+      Apellido:
+        type: "string"
+        format: "varchar(20)"
+      Edad:
+        type: "integer"
+        format: "int(20)"
+      horario:
+        type: "string"
+        format: "varchar(20)"
+      Clase:
+        type: "string"
+        format: "varchar(20)"
+    xml:
+      name: "Entrenador"
