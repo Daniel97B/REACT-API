@@ -15,6 +15,7 @@ Para la utilización de este Ejercicio-Practico, se debe tener encuenta los sigu
 
 5.Verificar que tengamos mos las rutas de las api correctamente
 
+6.Para mirar la documentacion de la api descargue y pegue el copdigo en el siguiente link [Documentacion](https://editor.swagger.io/).
 
 # Getting Started with Create React App
 
